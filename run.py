@@ -49,6 +49,7 @@ def printdealerhand(cards, firsttime = False):
     print(f'Dealer\'s deck: ',end='')
     for card in cards:
         print(f'[{card}]',end='')
+        
         if firsttime:
            print(f'[?]',end='')
            break
@@ -62,6 +63,7 @@ def dealerturn():
         else:
            givecard(dealercards)
            printdealerhand(dealercards)
+           print()
            time.sleep(1)
            if gethandvalue(dealercards) > 21:
                return True
@@ -82,6 +84,7 @@ def playerturn():
         if answer.lower() == 'hit':
            givecard(playercards)
            printplayerhand(playercards)
+           print()
            time.sleep(1)
            value = gethandvalue(playercards)
            if value > 21:
@@ -92,15 +95,31 @@ def playerturn():
            return False
 
 
+def printstats():
+    print('-----STATS-----')
+    printplayerhand(playercards)
+    print(f'Total value: {gethandvalue(playercards)}')
+    printdealerhand(dealercards)
+    print(f'Total value: {gethandvalue(dealercards)}')
+    print()
+    print('Thanks for playing')
+    print('---------------')
+
+
+
 # once the player goes over 21, the game is over.
 def gameover():
     if gethandvalue(playercards) == 21:
         print('You win! Congrats')
     else:
         print ('Oh! you lose it')    
-       
+    printstats() 
 
 def startgame():
+    print('Welcome to the BackJack game!')
+    time.sleep(1)
+    print('The rules are....')
+    time.sleep(3)
     for i in range(2):
         givecard(playercards)
         givecard(dealercards)
@@ -110,26 +129,26 @@ def startgame():
     printdealerhand(dealercards, True)
     time.sleep(1)
   
+
+    print()
     if playerturn():
         gameover()
         return
 
     if dealerturn():
-        print('uhu! You win!')
+        print('You win!')
 
-    playervalue =  gethandvalue(playercards)
+    playervalue = gethandvalue(playercards)
     dealervalue = gethandvalue(dealercards)   
 
     if playervalue < dealervalue:
-        print('oh!You lose')
+        print('You lose')
     elif playervalue == dealervalue:
         print('You draw!')
     else:
         print('You win the game! Congrats!')    
 
-    printplayerhand(playercards)
-    print(gethandvalue(playercards))    
-
+    printstats()  
 
 startgame()
 
