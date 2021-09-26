@@ -3,6 +3,7 @@
 import random
 import time # give it some time
 
+
 cards = ['A','2','3','4','5','6','7','8','9','10','J','Q','K']
 specialcards = ['J','Q','K']
 playercards = []
@@ -102,7 +103,7 @@ def printstats():
     printdealerhand(dealercards)
     print(f'Total value: {gethandvalue(dealercards)}')
     print()
-    print('Thanks for playing')
+    print('Thanks for playing 😍😍😍😍')
     print('---------------')
 
 
@@ -110,15 +111,22 @@ def printstats():
 # once the player goes over 21, the game is over.
 def gameover():
     if gethandvalue(playercards) == 21:
-        print('You win! Congrats')
+        print('You win! Congrats 😊 👏')
+        
     else:
-        print ('Oh! you lose it')    
+        print ('Oh! you lose 😒')
+        
     printstats() 
 
 def startgame():
-    print('Welcome to the BackJack game!')
-    time.sleep(1)
-    print('The rules are....')
+    print('⭐ ⭐ Welcome to the BackJack game!⭐ ⭐')
+    print()
+    print('The rules are:')
+    print('The objective is to get a hand total of closer to 21 than the dealer without going over 21.')
+    print('At the start of the game, the player and the dealer receive two cards each.')
+    print()
+    print('Good luck!😏')
+   
     time.sleep(3)
     for i in range(2):
         givecard(playercards)
@@ -136,17 +144,20 @@ def startgame():
         return
 
     if dealerturn():
-        print('You win!')
+        print('You win! 😄 👏')
 
     playervalue = gethandvalue(playercards)
     dealervalue = gethandvalue(dealercards)   
 
     if playervalue < dealervalue:
-        print('You lose')
+        print('You lose 😒')
+     
     elif playervalue == dealervalue:
-        print('You draw!')
+        print('You draw!😅')
+       
     else:
-        print('You win the game! Congrats!')    
+        print('You win the game! Congrats!😁 👏') 
+          
 
     printstats()  
 
