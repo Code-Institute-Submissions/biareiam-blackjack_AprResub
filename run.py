@@ -16,20 +16,26 @@ def giveplayercard():
     card = getcard()
     playercards.append(card)
 
-
-
+def playerturn():
+    while True:
+        answer = input("Will you hit or will you stay?")
+        if answer.lower() == 'hit':
+           giveplayercard()
+           print(playercards)
+        else:
+           return 
 
 def startgame():
     # it will print 2 random cards, and append them to the playercards hand each time. 
     for i in range(2):
         giveplayercard()
-    print(playercards)   
-    asnwer = input("Do you want another card?") 
+    print(playercards)
 
-    if asnwer.lower() == 'yes':
-        giveplayercard()
-    else:
-        pass    
+    playerturn ()
+    print(playercards)    
+
+
+startgame()
 
 
     
