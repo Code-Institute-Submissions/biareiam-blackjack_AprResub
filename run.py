@@ -9,6 +9,7 @@ specialcards = ['J','Q','K']
 playercards = []
 dealercards = []
 
+
 def getcard():
     """
     This function will get a random card each time
@@ -108,18 +109,22 @@ def printstats():
 
 
 
+
+
+
 # once the player goes over 21, the game is over.
 def gameover():
     if gethandvalue(playercards) == 21:
         print('You win! Congrats 😊 👏')
         
     else:
-        print ('Oh! you lose 😒')
+        print ('Oh! you lost 😒')
         
     printstats() 
 
+
 def startgame():
-    print('⭐ ⭐ Welcome to the BackJack game!⭐ ⭐')
+   
     print()
     print('The rules are:')
     print('The objective is to get a hand total of closer to 21 than the dealer without going over 21.')
@@ -127,6 +132,8 @@ def startgame():
     print()
     print('Good luck!😏')
    
+   
+
     time.sleep(3)
     for i in range(2):
         givecard(playercards)
@@ -144,7 +151,7 @@ def startgame():
         return
 
     if dealerturn():
-        print('You win! 😄 👏')
+        print('👏')
 
     playervalue = gethandvalue(playercards)
     dealervalue = gethandvalue(dealercards)   
@@ -157,11 +164,38 @@ def startgame():
        
     else:
         print('You win the game! Congrats!😁 👏') 
-          
-
+        
     printstats()  
+   
 
+
+
+def create_player():
+    """
+    Funtion to create a Player.
+    """
+    global player
+    
+    while True:
+        name = input("Please enter your name: ")
+        print()
+        print("⭐ ⭐ Welcome to the BlackJack game", name + " !⭐ ⭐")
+        if name != '':
+            break
+        else:
+            print("Enter a valid name.\n")
+
+
+
+create_player()
 startgame()
+
+
+
+
+
+
+
 
 
     
