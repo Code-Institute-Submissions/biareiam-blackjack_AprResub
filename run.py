@@ -89,6 +89,7 @@ def playerturn():
            print()
            time.sleep(1)
            value = gethandvalue(playercards)
+           print()
            if value > 21:
                return True
            elif value == 21:
@@ -129,6 +130,7 @@ def startgame():
     print('The rules are:')
     print('The objective is to get a hand total of closer to 21 than the dealer without going over 21.')
     print('At the start of the game, the player and the dealer receive two cards each.')
+    print('Kings, Queens, and Jacks are worth 10 points./nAces are worth 1 or 11 points.\nCards 2 through 10 are worth their face value.\nHit to take another card.\nStay to stop taking cards.')
     print()
     print('Good luck!😏')
    
@@ -177,7 +179,7 @@ def create_player():
     global player
     
     while True:
-        name = input("Please enter your name: ")
+        name = input("Please enter a username: ")
         print()
         print("⭐ ⭐ Welcome to the BlackJack game", name + " !⭐ ⭐")
         if name != '':
