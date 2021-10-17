@@ -1,4 +1,3 @@
-
 import random
 import time
 
@@ -63,7 +62,6 @@ class Hand():
             self.aces -= 1 
 
 
- 
 def hit(deck,hand):
     """
       This function will draw cards to the player or dealers hand, while adjusting the value of ace.
@@ -116,19 +114,22 @@ def show_all(player,dealer):
     """
     This function will show all the cards on the player's and dealer's hand.
     """
-
-    print("\n The Final Result is :")
+    print("/---------------------------------------------------------/")
+    print("\n                   Final Result:")
     print("\nDealer's Hand: ")
     for card in dealer.cards:
         print(f"  {card}")
-       
+    print()
     print(f"  The total value of Dealer's hand is {dealer.value}")
-    
+    time.sleep(1)
+
     print("\nPlayer's Hand: ")
     for card in player.cards:
         print(f"  {card}")
-        
+    print()    
     print(f"  The total value of Player's hand is {player.value}")
+    
+
 
 
 def player_busts(player,dealer):
@@ -136,13 +137,15 @@ def player_busts(player,dealer):
      This function will display a message if the player busted.
     """
     print("\nOh,Player busted! The dealer won the game! 😒")
+    
  
 
 def player_wins(player,dealer):
     """
     This function will display a message if the player wins the game.
     """
-    print("\n Uhu! The player won the game!! 😁")
+    print("\nUhu! The player won the game!! 😁")
+
     
 
 
@@ -151,6 +154,7 @@ def dealer_busts(player,dealer):
      This function will display a message if the player wins the game and the dealer busted.
     """
     print("\nThe dealer busted! Congrats, the player won the game !! 👏😁")
+   
   
 
 
@@ -159,6 +163,7 @@ def dealer_wins(player,dealer):
      This function will display a message if the dealer wins the game.
     """
     print("\nOh no!The dealer won! 😒")
+   
 
 
 def create_player():
@@ -191,9 +196,13 @@ while True:
     print('The rules are:')
     print('- The objective is to get a hand total of closer to 21 than the dealer without going over 21.')
     print('- At the start of the game, the player and the dealer receive two cards each.')
-    print('- Kings, Queens, and Jacks are worth 10 points./n- Aces are worth 1 or 11 points.\n- Cards 2 through 10 are worth their face value.\nHit to take another card.\n- Stay to stop taking cards.')
+    print('- Kings, Queens, and Jacks are worth 10 points.')
+    print('- Aces are worth 1 or 11 points.')
+    print('- Cards 2 through 10 are worth their face value.')
+    print('- Hit to take another card.\n- Stay to stop taking cards.')
     print()
-    print('Good luck!😏')
+    print('Good luck and enjoy it!😏')
+    time.sleep(1)
     
     
     # Create and shuffle the deck
@@ -208,16 +217,18 @@ while True:
     Dealer_hand.add_card(New_Deck.deal())
     Player_hand.add_card(New_Deck.deal())
     Dealer_hand.add_card(New_Deck.deal())
+    time.sleep(2)
     
 
     # Shoing the player's hand and displaying only one of the dealer's cards
     show_some(Player_hand,Dealer_hand)
+    time.sleep(1)
     
     while playing:  
         
         hit_or_stand(New_Deck,Player_hand)
         show_some(Player_hand,Dealer_hand)
-        
+        time.sleep(1)
         # If player's hand goes over 21, run player_busts() and break out of loop
         if Player_hand.value > 21:
             show_all(Player_hand,Dealer_hand)
@@ -260,8 +271,10 @@ while True:
     elif play_again[0].lower() == 'n':
         playing = False 
         print("\nThank You for Playing Blackjack, hope you had fun !!")
+        print()
         break
     else:
         print("You have not entered a valid Input, the game will end!")
         print("Thanks for playing, until next time! o/")
+        print()
         break
