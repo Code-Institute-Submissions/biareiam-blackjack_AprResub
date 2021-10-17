@@ -26,14 +26,14 @@ class Deck():
       
         for suit in card_suits:
             for rank in card_ranks :
-                created_card = Card(suit,rank)
-                self.all_cards.append(created_card)
+                deck_card = Card(suit,rank)
+                self.all_cards.append(deck_card)
                 
     def __str__(self):
-        deck_comp = ''
+        deck_cards= ''
         for card in self.all_cards:
-            deck_comp += '\n' + card.__str__()
-        return "The deck has:  " + deck_comp
+            deck_cards+= '\n' + card.__str__()
+        return "The deck has:  " + deck_cards
             
     def shuffle(self):
         random.shuffle(self.all_cards)
@@ -56,7 +56,7 @@ class Hand():
         if card.rank == 'Ace':
             self.aces += 1
             
-    def value_ace(self):
+    def ace_value(self):
         while self.value > 21 and self.aces:
             self.value -= 10 
             self.aces -= 1 
@@ -68,7 +68,7 @@ def hit(deck,hand):
     """
     single_card = deck.deal()
     hand.add_card(single_card)
-    hand.value_ace()
+    hand.ace_value()
 
 
 def hit_or_stand(deck,hand):
@@ -79,13 +79,13 @@ def hit_or_stand(deck,hand):
     
     while True:
         print()
-        x = input("Do you want to hit or stay? Enter 'h' or 's' :")
+        player_move = input("Do you want to hit or stay? Enter 'h' or 's' :")
         
-        if x[0].lower() =='h':
+        if player_move[0].lower() =='h':
             hit(deck,hand)
             print("\nPlayer Hits !")
             
-        elif x[0].lower() == 's':
+        elif player_move[0].lower() == 's':
             print("\nPlayer Stands, Dealer's Turn")
             playing = False
             
@@ -217,7 +217,7 @@ while True:
     Dealer_hand.add_card(New_Deck.deal())
     Player_hand.add_card(New_Deck.deal())
     Dealer_hand.add_card(New_Deck.deal())
-    time.sleep(2)
+    time.sleep(1)
     
 
     # Shoing the player's hand and displaying only one of the dealer's cards
@@ -267,7 +267,8 @@ while True:
     
     if play_again[0].lower() == 'y':
         playing = True 
-        continue 
+        print()
+        continue
     elif play_again[0].lower() == 'n':
         playing = False 
         print("\nThank You for Playing Blackjack, hope you had fun !!")
