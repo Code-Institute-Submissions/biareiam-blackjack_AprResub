@@ -173,7 +173,7 @@ def create_player():
     global player
     
     while True:
-        name = input("Please enter a username: ")
+        name = input("Please enter a username:\n")
         print()
         print("⭐ ⭐ Welcome to the BlackJack game", name + " !⭐ ⭐")
         print()
@@ -263,7 +263,7 @@ while True:
     
     # Ask player, if he/she wants to continue playing the game
    
-    play_again = input("\nWould you like to play again ? Enter y for yes and n for no: ")
+    play_again = input("\nWould you like to play again ? Enter y for yes and n for no:\n")
     
     if play_again[0].lower() == 'y':
         playing = True 
