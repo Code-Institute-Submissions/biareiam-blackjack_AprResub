@@ -2,7 +2,7 @@
 
 Welcome to my 3rd project.The aim of this project was to build a command-line game of 21 or BlackJack using Python.The goal of this game is to amount card values as near to 21 as possible without exceeding or 'busting' it. It is simple If the dealer gets closer to 21 points or 21 exactly, it wins the game. If the player is the one who gets closer to 21 or 21 exactly, they are the winner. This game will not be dealing with bets. 
 
-Here is the live version of my project
+Here is the live version of my project.
 
  ![command-line game](https://game-21.herokuapp.com/)
 
