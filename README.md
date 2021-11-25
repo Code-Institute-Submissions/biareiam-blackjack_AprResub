@@ -61,11 +61,17 @@ I have manually tested this project by doing the following:
 ## Deployment 
 
 This project was deployed using Code Institute’s mock terminal for Heroku.
+
     - Steps for deployment were: 
+    
     - Fork or clone this repository
+    
     - Create a new Heroku app
+    
     - Set the builtbacks to Python and NodeJS in that order
+    
     - Link Heroku app to the repository
+    
     - Clicking on Deploy
 
 
