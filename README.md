@@ -4,7 +4,7 @@ Welcome to my 3rd project.The aim of this project was to build a command-line ga
 
 Here is the live version of my project.
 
- ![command-line game](https://game-21.herokuapp.com/)
+ [command-line game](https://game-21.herokuapp.com/)
 
 ## How to play
 
