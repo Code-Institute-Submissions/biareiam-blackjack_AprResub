@@ -1,6 +1,7 @@
+
 # BlackJack/Easy 21 command-line application game
 
-Welcome to my 3rd project.The aim of this project was to build a command-line game of Easy 21, also know as BlackJack, using Python.The goal of this game is to amount card values as near to 21 as possible without exceeding or 'busting' it. It is simple If the dealer gets closer to 21 points or 21 exactly, it wins the game. If the player is the one who gets closer to 21 or 21 exactly, they are the winner. This game will not be dealing with bets. 
+Welcome to my 3rd project.The aim of this project was to build a command-line game of Easy 21, also known as BlackJack, using Python.The goal of this game is to amount card values as near to 21 as possible without exceeding or 'busting' it. It is simple If the dealer gets closer to 21 points or 21 exactly, it wins the game. If the player is the one who gets closer to 21 or 21 exactly, they are the winner. This game will not be dealing with bets. 
 Once the game is over, users can choose to leave it or keep playing. 
 
 Here is the live version of my project.
@@ -20,11 +21,11 @@ Card Values are as follows:
 The rules of the original game can be found here : [Wikipedia](https://en.wikipedia.org/wiki/Blackjack) 
 
 ## User Stories
- 1. As a player, I want to be able to enter an username.
+ 1. As a player, I want to be able to enter a username.
  2. As a player, I want to be able to see the rules of the game.
- 3. As a player, I want to be able to choose if I can to hit or stay.
+ 3. As a player, I want to be able to choose if I can hit or stay.
  4. As a player, I want to be able to see my cards.
- 5. As a player, I want to be able to see the dealer's hand in the end of the game and a sum of it.
+ 5. As a player, I want to be able to see the dealer's hand at the end of the game and a sum of it.
  6. As a player, I want to have the option to play again or quit it. 
 
 ## Features
@@ -97,17 +98,11 @@ This project was deployed using Code Institute’s mock terminal for Heroku.
 
 * Code Institute for the deployment terminal
 * [Bicyclecards](https://bicyclecards.com/how-to-play/blackjack/) for the rules of the blackjack/21 game.
-* [Brilliant](https://brilliant.org/wiki/programming-blackjack/) - Helped to have a better understading of the logic of the game.
+* [Brilliant](https://brilliant.org/wiki/programming-blackjack/) - Helped to have a better understanding of the logic of the game.
 
 
 ## Acknowledgements
 
 I appreciate the support, feedback and guidance of the following people throughout this project: my mentor Victor Miclovich, the tutors and the community on slack.
+
 This is for educational use.
-
-
-
-
-
-
-
