@@ -63,11 +63,16 @@ The rules of the original game can be found here : [Wikipedia](https://en.wikipe
 
 ## Technologies
 
+This project is based on Python programming language. The technologies and tools that were used are listed below.
+
 * HTML5
 * CSS 3
 * JavaScript
-* Python
-* Heroku
+* Python -  The game was developed using Python.
+* Python Library (random and time) - andom.randint library was used to generate random the cards. The time library was used to add some time interval before parts pf the game being displayed.
+* Heroku - It was used to deploy and host the project live in the cloud.
+* PEP8 Validator - Tool used for code validation and check for any errors and warnings.
+
 
 ## Testing
 
@@ -76,6 +81,18 @@ I have manually tested this project by doing the following:
 - Starting and playing the game several times. 
 - Given invalid inputs.
 - Tested in my local terminal and the Code Institute Heroku terminal.
+- PEP8 Validator was used as a tool to validate the code and check for any errors and warnings within the code.
+
+## Bugs
+
+- Empty user input could break the program - Fixed
+
+### PEP8 Code Validator Test
+
+The code was passed into the following Python code validator tool PEP8 Online The results obtained are shown in the screenshot below. No errors or warnings were found in the code.
+
+![validation](https://user-images.githubusercontent.com/65717229/147476740-a11f8311-1275-4882-b3d0-82b537a42196.PNG)
+
 
 ## Deployment 
 
